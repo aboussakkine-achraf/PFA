@@ -1,0 +1,26 @@
+name: front_pfa
+description: "A new Flutter project."
+
+publish_to: 'none'
+
+version: 1.0.0+1
+
+environment:
+  sdk: ^3.5.4
+
+dependencies:
+  flutter:
+    sdk: flutter
+  dio: ^5.0.0  # Keep dio dependency here
+  image_picker: ^0.8.7+3  # Add image_picker dependency here
+  cupertino_icons: ^1.0.8
+  permission_handler: ^11.3.1  # Add permission_handler dependency here
+  image: ^4.5.1
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^4.0.0
+
+flutter:
+  uses-material-design: true
