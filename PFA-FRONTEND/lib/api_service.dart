@@ -5,12 +5,16 @@ import 'package:permission_handler/permission_handler.dart';
 
 class ApiService {
   final Dio _dio = Dio(BaseOptions(
-    connectTimeout: Duration(milliseconds: 9000), // 5 seconds
-    receiveTimeout: Duration(milliseconds: 9000), // 3 seconds
+    connectTimeout: Duration(milliseconds: 20000), // 5 seconds
+    receiveTimeout: Duration(milliseconds: 20000), // 3 seconds
   ));
 
   // URL of your Spring Boot API
-  final String apiUrl = "http://192.168.1.4:8080/api/ocr/upload";
+  // final String apiUrl = "http://192.168.1.4:8080/api/ocr/upload";
+
+  final String apiUrl = "http://172.20.10.6:8080/api/ocr/upload";
+
+  // URL MDRASSA
 
   // Method to send an image to the API and get the extracted data
   Future<Map<String, dynamic>?> uploadImage(File file) async {

@@ -4,6 +4,7 @@ import 'dart:io';
 import 'package:image/image.dart' as img; // Import the image package
 import 'package:permission_handler/permission_handler.dart';
 import 'api_service.dart';
+import 'scan.dart'; // Import the ScanIdentityWidget
 
 class IdentityFileScreen extends StatefulWidget {
   @override
@@ -147,6 +148,18 @@ class _IdentityFileScreenState extends State<IdentityFileScreen> {
             ElevatedButton(
               onPressed: _pickImageFromGallery,
               child: const Text('Upload Image'),
+            ),
+            const SizedBox(height: 10),
+            ElevatedButton(
+              onPressed: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => ScanIdentityWidget(),
+                  ),
+                );
+              },
+              child: const Text('Scan Image'),
             ),
             const SizedBox(height: 30),
             // Display extracted information
